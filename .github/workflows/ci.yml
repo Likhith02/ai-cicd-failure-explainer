@@ -20,7 +20,9 @@ jobs:
       - name: Run backend tests
         run: |
           cd backend
-          pytest
+          export PYTHONPATH=.
+          python -m pytest
+          
 
   frontend:
     runs-on: ubuntu-latest
